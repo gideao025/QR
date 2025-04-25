@@ -12,8 +12,8 @@ Um aplicativo web simples feito com Flask para gerar QR Codes personalizados.
 Clone o repositório e instale as dependências:
 
 ```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
-cd seu-repositorio
+git clone https://github.com/gideao025/QR
+cd QR
 pip install flask qrcode pillow
 ```
 
