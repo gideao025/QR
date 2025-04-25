@@ -15,8 +15,9 @@ Clone o repositório e instale as dependências:
 git clone https://github.com/seu-usuario/seu-repositorio.git
 cd seu-repositorio
 pip install flask qrcode pillow
-
+```
 
 ## ✅ Execute 
 ```bash
 python app.py
+```
