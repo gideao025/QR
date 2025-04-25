@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de QR Code</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        img {
+            margin-top: 20px;
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gerador de QR Code</h1>
+    <form method="POST">
+        <input type="text" name="text" placeholder="Digite o texto ou URL" required>
+        <button type="submit">Gerar QR Code</button>
+    </form>
+    {% if qr_image %}
+        <h2>Seu QR Code:</h2>
+        <img src="{{ url_for('static', filename='qrcodes/' + qr_image) }}" alt="QR Code">
+    {% endif %}
+</body>
+</html>
