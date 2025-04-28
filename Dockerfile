@@ -8,7 +8,7 @@ WORKDIR /app
 COPY requirements.txt .
 
 # Instala as dependências
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir flask qrcode pillow
 
 # Copia o restante do código da aplicação
 COPY . .
